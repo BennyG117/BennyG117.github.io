@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>BG Portfolio 2</title>
+    
+    <!-- linking css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- adding in fontAwsomeLogos -->
+    <script src="https://kit.fontawesome.com/6e8f080b2c.js" crossorigin="anonymous"></script>
+    
   </head>
   <body>
     <div>
@@ -52,12 +58,21 @@
               <img src="/images/BG/bg1small.jpg" alt="picture of Ben" />
             </div>
             <!-- {/* right for text */} -->
+            <!-- //TODO: ALL TEXT IN THE ABOUT SECTION EXCEPT the "ABOUT ME" may need to be adjusted in the css to be a percent ratio size instead of set size so it's more scalable* -->
             <div class="about-col-2">
               <h1 class="sub-title">About Me</h1>
               <p class="sub-title-p">
-                Proficient in full stack JavaScript, C#, and Python. Excellent communication skills with an innate ability to rapidly absorb new concepts and creatively solve problems. Experienced in navigating real-world deadlines, often in high-pressure environments, resulting in exemplary time management, multitasking, and project tracking skills. In the ever-evolving world of software development, I’m ready to leverage my unique background to enhance team dynamics and contribute towards innovation.
+                Proficient in full stack JavaScript, C#, and Python. Excellent
+                communication skills with an innate ability to rapidly absorb
+                new concepts and creatively solve problems. Experienced in
+                navigating real-world deadlines, often in high-pressure
+                environments, resulting in exemplary time management,
+                multitasking, and project tracking skills. In the ever-evolving
+                world of software development, I'm ready to leverage my unique
+                background to enhance team dynamics and contribute towards
+                innovation.
               </p>
-
+              <!-- //TODO: REMINDER TO ADJUST tab-titles text to bold or some level of h-tag -->
               <div class="tab-titles">
                 <p class="tab-links active-link" onClick="opentab('skills')">
                   Skills
@@ -126,7 +141,9 @@
                     <span>Aug 2015</span>
                     <br />
                     University of Arizona - Bachelor of Science: Social
-                    Behavioral Sciences - Major: Regional Development - Thematic Minor: Gender Studies, Communication, and Business Management 
+                    Behavioral Sciences - Major: Regional Development - Thematic
+                    Minor: Gender Studies, Communication, and Business
+                    Management
                   </li>
                 </ul>
               </div>
@@ -134,24 +151,51 @@
           </div>
         </div>
       </div>
+      <!-- {/* ------------- SERVICES SECTION -------------  */} -->
+      <!-- TODO: must update services details and text -->
+      <div id="services">
+          <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2 class="services-h2">Web Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nulla accusamus sequi deleniti harum eum adipisci. Earum porro iure totam nisi ipsa, quibusdam, ratione, sapiente quidem expedita fugit vero aut!</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2 class="services-h2">UI/UX Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nulla accusamus sequi deleniti harum eum adipisci. Earum porro iure totam nisi ipsa, quibusdam, ratione, sapiente quidem expedita fugit vero aut!</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2 class="services-h2">App Design</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nulla accusamus sequi deleniti harum eum adipisci. Earum porro iure totam nisi ipsa, quibusdam, ratione, sapiente quidem expedita fugit vero aut!</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+          </div>
+      </div>
+
+
+
       <!-- ------------------ adding script for tab links  -->
-      <!-- creating tablinks and tabcontents to use open tab function // event to create underline functionality // finally adding document at end to display specific text to tabname category -->
+      <!-- ABOUT ME SCRIPT -- creating tablinks and tabcontents to use open tab function // event to create underline functionality // finally adding document at end to display specific text to tabname category -->
       <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+        function opentab(tabname) {
+          for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+          }
+          for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
         }
-
-
-
       </script>
     </div>
   </body>
