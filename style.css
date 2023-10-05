@@ -258,5 +258,90 @@
 .services-list div:hover{
   background-color: #42686f;
   transform: translateY(-10px);
-
 } 
+
+
+  /* ---------- Portfolio SECTION ----------  */
+
+#portfolio{
+  padding: 50px 0;
+}
+
+/* work list images */
+
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* TODO: CLEAN UP custom changes to try and account for odd image sizes */
+.work img{
+width: 100%;
+/* max-height: 500px; */
+/* max-width: 750px; */
+border-radius: 10px;
+display: block;
+transition: transform 0.5s;
+  /* width: 500px;
+  min-width: 400px;
+  height: 500px;
+  min-height: 400px;
+  object-fit:cover ;
+  border-radius: 25px;
+  display: block; */
+}
+
+.work:hover img{
+  transform: scale(1.1);
+}
+
+
+.work:hover .layer{
+  height: 100%;
+}
+
+/* fade color overlay effect on image thumbnail */
+.layer{
+  width: 100%;
+  /* height: 100%; */
+  height: 0;
+  /* background: linear-gradient(rgba(238, 192, 167, 0.6),#364958); */
+  background: linear-gradient(rgba(54, 73, 88, 0.4),#eec0a7);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 18px;
+}
+.layer h3{
+  font-weight: 700;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.layer a{
+  margin-top: 20px;
+  color: #3B6064;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 60px;
+  background: #f1efe3;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
