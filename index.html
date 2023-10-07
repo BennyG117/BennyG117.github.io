@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="mobile-view">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,26 +22,26 @@
           <nav>
             <!--//TODO: Reminder to insert image logo of name here */} -->
             <!-- {/* <img src="images/logo.png" alt="logo" /> */} -->
-            <h2 class="logo">Ben.</h2>
-            <ul>
+            <h2 class="logo">Ben</h2>
+            <ul id="sidemenu">
               <li>
-                <a href="#">Home</a>
+                <a href="#header">Home</a>
               </li>
               <li>
-                <a href="#">About</a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="#">Services</a>
+                <a href="#services">Services</a>
               </li>
               <li>
-                <a href="#">Portfolio</a>
+                <a href="#portfolio">Portfolio</a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
               </li>
-              <i class="fas fa-solid fa-xmark"></i>
+              <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
-            <i class="fas fa-solid fa-bars"></i>
+            <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
           </nav>
           <div class="header-text">
             <p>UI/UX Designer</p>
@@ -65,7 +65,7 @@
             <!-- //TODO: ALL TEXT IN THE ABOUT SECTION EXCEPT the "ABOUT ME" may need to be adjusted in the css to be a percent ratio size instead of set size so it's more scalable* -->
             <div class="about-col-2">
               <h1 class="sub-title">About Me</h1>
-              <p class="sub-title-p">
+              <p class="sub-title-p text-indent">
                 Proficient in full stack JavaScript, C#, and Python. Excellent
                 communication skills with an innate ability to rapidly absorb
                 new concepts and creatively solve problems. Experienced in
@@ -199,7 +199,8 @@
       </div>
       <!-- {/* ------------- Portfolio SECTION -------------  */} -->
       <!-- //TODO: Need to add links to Github until other projects are finished -->
-      <div class="portfolio">
+      <!-- <div class="portfolio"> -->
+      <div id="portfolio">
         <div class="container">
           <h1 class="sub-title">My Work</h1>
           <div class="work-list">
@@ -312,6 +313,8 @@
 
       <!-- ------------------ adding script for tab links  -->
       <!-- ABOUT ME SCRIPT -- creating tablinks and tabcontents to use open tab function // event to create underline functionality // finally adding document at end to display specific text to tabname category -->
+
+      
       <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
@@ -326,6 +329,19 @@
           document.getElementById(tabname).classList.add("active-tab");
         }
       </script>
+
+      <!-- Adding Lines Menu function for top nav bar - mobile view -->
+      <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+          sidemenu.style.right = "0";
+        }
+        function closemenu(){
+          sidemenu.style.right = "-200px";
+        }
+      </script>
+
     </div>
   </body>
 </html>

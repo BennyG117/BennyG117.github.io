@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background: #3b6064;
   /* color: #FFFEF7; */
@@ -17,10 +21,25 @@ body {
 /* header for top of page */
 #header {
   width: 100%;
-  height: 100vh;
-  background-image: url(images/BG/Sedona.jpg);
-  background-size: cover;
-  background-position: center;
+  height: 90vh;
+  /* height: 100%; */
+  /* background-image: url(images/BG/Sedona.jpg); */
+  /* background-size: cover; */
+  /* background-position: center; */
+
+  background-image: linear-gradient(to left, rgba(238, 192, 167, 0.0), rgba(59, 96, 100, 1)), url(images/BG/Sedona.jpg);
+  background-size: 20% 100%, cover;
+  /* background-position: top, center; */
+  background-position: left top;
+  background-repeat: no-repeat, no-repeat;
+
+
+
+    /* background-image: linear-gradient(to right, rgba(238, 192, 167, 0), rgba(238, 192, 167, 0)), url(images/BG/Sedona.jpg);
+    background-size: 20% 20%, cover;
+    background-position: center;
+    background-repeat: no-repeat, no-repeat; */
+  
 }
 
 /* container */
@@ -85,7 +104,7 @@ nav ul li a:hover::after {
 /* header text and h1 */
 .header-text h1 {
   font-size: 60px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 /* with span  */
@@ -137,6 +156,7 @@ nav ul li a:hover::after {
   font-size: 21px;
   color: #f1efe3;
   /* font-weight: 300; */
+  text-indent: 1em;
 }
 
 /* tab titles & labels */
@@ -251,7 +271,7 @@ nav ul li a:hover::after {
   transform: translateY(-10px);
 }
 
-/* ---------- Portfolio SECTION ----------  */
+/* ---------- Portfolio/My Work SECTION ----------  */
 
 #portfolio {
   padding: 50px 0;
@@ -303,9 +323,10 @@ nav ul li a:hover::after {
   /* height: 100%; */
   height: 0;
   /* background: linear-gradient(rgba(238, 192, 167, 0.6),#364958); */
-  background: linear-gradient(rgba(54, 73, 88, 0.4), #eec0a7);
+  background: linear-gradient(rgba(54, 73, 88, 0.8), #eec0a7);
   border-radius: 10px;
   position: absolute;
+
   left: 0;
   bottom: 0;
   overflow: hidden;
@@ -315,12 +336,12 @@ nav ul li a:hover::after {
   flex-direction: column;
   padding: 0 40px;
   text-align: center;
-  font-size: 18px;
+  font-size: small;
   transition: height 0.5s;
 }
 .layer h3 {
   font-weight: 700;
-  margin-top: 80px;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 .layer a {
@@ -448,9 +469,43 @@ nav .fas{
 }
 
 @media only screen and (max-width: 600px){
-  #header{
-    background-image: url(images/BG/BGmobile.jpg);
+  /* TODO: ERROR HERE - when using mobile view width is constrained to 370ish px */
+  #mobile-view{
+    /* width: 600px; */
   }
+
+  .logo{
+    color: #42686f;
+  }
+
+  #header{
+
+    width: 600px;
+    background-image: linear-gradient(rgba(238, 192, 167, 0.0), rgba(59, 96, 100, 1)), url(images/BG/BGmobile.jpg);
+    background-size: 100% 40%, cover;
+    /* background-position: top, center; */
+    background-position: bottom, center;
+    background-repeat: no-repeat, no-repeat;
+
+
+    /* background-image: url(images/BG/BGmobile.jpg);
+    background: linear-gradient(rgba(238, 192, 167, 0.6),#364958); */
+
+      /* background-image: linear-gradient(rgba(238, 192, 167, 0), rgba(16, 12, 10, 0)), url(images/BG/BGmobile.jpg);
+      background-size: 100% 100%, cover;
+      background-position: bottom, center;
+      background-repeat: no-repeat, no-repeat; */
+
+  }
+    /* added colors to bars for visability */
+    .fa-bars{
+      color: #eec0a7;
+      border: 1px solid #42686f;
+      background-color: #42686f;
+      padding: 4px;
+      border-radius: 5px;
+      align-items: center;
+    }
 
     .header-text{
       margin-top: 100%;
@@ -460,6 +515,74 @@ nav .fas{
       font-size: 30px;
     }
 
+    nav .fas{
+      display: block;
+      font-size: 25px;
+    }
+    
+    nav ul{
+      /* background: #dcb29b; */
+      background:linear-gradient(rgba(238, 192, 167, 1), rgba(59, 96, 100, 1));
+      background-size: 100%, 50%, cover;
+      position: fixed;
+      top: 0;
+      right: -200px;
+      /* right: 0; */
+      width: 200px;
+      height: 90vh;
+      padding-top: 50px;
+      z-index: 2;
+      transition: right 0.5s;
 
-}
+    }
+
+    nav ul li{
+      display: block;
+      margin: 25px;
+    }
+
+    nav ul .fas{
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      cursor: pointer;
+    }
+
+    /* -------editing mobile view for ABOUT ME section ------ */
+    .sub-title{
+      font-size: 40px;
+    }
+
+
+    .about-col-1, .about-col-2{
+      flex-basis: 100%;
+    }
+
+    .about-col-1{
+      margin-bottom: 30px;
+    }
+    
+    .about-col-2{
+      font-size: 14px;
+    }
+
+    .tab-links{
+      font-size: 16px;
+      /* margin-right:20px; */
+    }
+
+
+        /* -------editing mobile view for CONTACT ME section ------ */
+    .contact-left, .contact-right{
+      flex-basis: 100%;
+    }
+
+    .copyright{
+      font-size: 14px;
+      width: 600px;
+
+
+
+    }
+  }
 
