@@ -47,7 +47,7 @@
             <p>UI/UX Designer</p>
             <h1>
               Hi, I'm <span>Ben Gomez </span> <br />
-              from ...
+              <!-- from ... -->
             </h1>
           </div>
         </div>
@@ -262,7 +262,7 @@
                 <i class="fa-regular fa-paper-plane"></i> bengomezp@gmail.com
               </p>
               <p>
-                <i class="fa-solid fa-square-phone"></i> Phone number available
+                <i class="fa-solid fa-square-phone"></i> Available
                 upon request
               </p>
               <div class="social-icons">
@@ -275,7 +275,7 @@
               </div>
               <!--! RESUME DOWNLOAD - UPDATE RESUME ATTACHMENT REGULARLY - Last updated 10/5/23 -->
               <a
-                href="images/v6.BenGomez.Resume.2023.pdf"
+                href="images/BenGomez.Resume.2023.pdf"
                 download
                 class="btn btn2"
                 >Download Resume</a
@@ -287,34 +287,36 @@
                 <input
                   type="text"
                   name="name"
+                  id="name"
                   placeholder="Your Name"
                   required
                 />
-                <input
+                <input 
                   type="email"
                   name="email"
+                  id="email"
                   placeholder="Your Email"
                   required
                 />
                 <textarea
                   name="Message"
                   rows="6"
+                  id="message"
                   placeholder="Your Message"
                 ></textarea>
                 <button type="submit" class="btn btn2">Submit</button>
               </form>
             </div>
           </div>
-        </div> 
+        </div>
         <div class="copyright">
-          <p>Copyright <i class="fa-regular fa-copyright"></i>  Ben. 2023 </p>
+          <p>Copyright <i class="fa-regular fa-copyright"></i> Ben. 2023</p>
         </div>
       </div>
 
       <!-- ------------------ adding script for tab links  -->
       <!-- ABOUT ME SCRIPT -- creating tablinks and tabcontents to use open tab function // event to create underline functionality // finally adding document at end to display specific text to tabname category -->
 
-      
       <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
@@ -334,14 +336,13 @@
       <script>
         var sidemenu = document.getElementById("sidemenu");
 
-        function openmenu(){
+        function openmenu() {
           sidemenu.style.right = "0";
         }
-        function closemenu(){
+        function closemenu() {
           sidemenu.style.right = "-200px";
         }
       </script>
-
     </div>
   </body>
 </html>
