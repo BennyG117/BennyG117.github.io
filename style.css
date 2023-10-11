@@ -21,31 +21,33 @@ body {
 /* header for top of page */
 #header {
   width: 100%;
-  height: 90vh;
+  /* height: 90vh; */
+  height: 60vh;
   /* height: 100%; */
 
   /* background-image: url(images/BG/Sedona.jpg); */
   /* background-size: cover; */
   /* background-position: center; */
 
-  background-image: linear-gradient(to left, rgba(238, 192, 167, 0.0), rgba(59, 96, 100, 1)), url(images/BG/Sedona.jpg);
-  background-size: 20% 100%, cover;
+  /* background-image: linear-gradient(to left, rgba(238, 192, 167, 0.0), rgba(59, 96, 100, 1)), url(images/BG/Sedona.jpg); */
+
+  background-image: linear-gradient(to left, rgba(238, 192, 167, .2), rgba(59, 96, 100, 1)), url(images/BG/Sedona.jpg);
+  background-size: 100% 100%, cover;
+  /* background-size: 20% 100%, cover; */
+
   /* background-position: top, center; */
   background-position: left top;
   background-repeat: no-repeat, no-repeat;
 
-
-
-    /* background-image: linear-gradient(to right, rgba(238, 192, 167, 0), rgba(238, 192, 167, 0)), url(images/BG/Sedona.jpg);
-    background-size: 20% 20%, cover;
-    background-position: center;
-    background-repeat: no-repeat, no-repeat; */
+    /* ====== overflow text attempt */
+    overflow:hidden;
   
 }
 
 /* container */
 .container {
   padding: 10px 10%;
+
 }
 
 /* Nav */
@@ -71,10 +73,10 @@ nav ul li {
 
 /* nav ul li a - adjusted font color for group */
 nav ul li a {
-  /* color: #F4FFF5; */
+  /* color: #42686f; */
   color: #f1efe3;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 30px;
   position: relative;
 }
 
@@ -84,7 +86,9 @@ nav ul li a::after {
   /* width: 100%; */
   width: 0;
   height: 3px;
-  background: #3b6064;
+  background: #eec0a7;
+  /* background: #3b6064; */
+  /* background: #f1efe3; */
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -98,8 +102,10 @@ nav ul li a:hover::after {
 
 /* Header text and page titles */
 .header-text {
-  margin-top: 20%;
-  font-size: 30px;
+  /* margin-top: 20%; */
+  margin-top: 425px;
+  font-size: 35px;
+
 }
 
 /* header text and h1 */
@@ -117,7 +123,7 @@ nav ul li a:hover::after {
 /* ------------- ABOUT ME SECTION -------------  */
 
 #about {
-  padding: 80px 0;
+  padding: 60px 0;
   color: #fffef7;
 }
 
@@ -130,11 +136,14 @@ nav ul li a:hover::after {
 /* Left column containing image */
 .about-col-1 {
   flex-basis: 35%;
+  margin-bottom: 10px;
+  /* background-color: red; */
 }
 
 .about-col-1 img {
   width: 100%;
   border-radius: 15px;
+
 }
 
 /* Right column containing Text */
@@ -143,7 +152,7 @@ nav ul li a:hover::after {
 }
 
 .about-col-2 p {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
 }
 
@@ -151,30 +160,38 @@ nav ul li a:hover::after {
 .sub-title {
   font-size: 60px;
   font-weight: 600;
+  margin-bottom: 12px;
   color: #eec0a7;
 }
 
 .sub-title-p {
-  font-size: 21px;
+  /* font-size: 22px; */
   color: #f1efe3;
   /* font-weight: 300; */
+  /* text-indent: 1em; */
+}
+
+.text-indent{
   text-indent: 1em;
+
 }
 
 /* tab titles & labels */
 .tab-titles {
   display: flex;
   margin: 50px 0 20px;
+
 }
 
 .tab-titles p {
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: 500;
   color: #f1efe3;
 }
 
 .tab-links {
   margin-right: 50px;
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 800;
   cursor: pointer;
   position: relative;
@@ -200,7 +217,7 @@ nav ul li a:hover::after {
 .tab-contents ul li {
   list-style: none;
   margin: 10px 0;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
 }
 
@@ -221,7 +238,7 @@ nav ul li a:hover::after {
   color: #f1efe3;
 }
 
-/* ---------- SERVICES SECTION ----------  */
+/* ---------- MY SERVICES SECTION ----------  */
 
 #services {
   padding: 30px 0;
@@ -255,11 +272,16 @@ nav ul li a:hover::after {
 .services-list div h2 {
   color: #eec0a7;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 15px;
 }
 
-/* a tag link */
+.services-text{
+  font-size: 22px;
+}
+
+
+/* a tag link  == can add again if I want to include links to "learn more..." */
 .services-list div a {
   text-decoration: none;
   color: #eec0a7;
@@ -268,12 +290,14 @@ nav ul li a:hover::after {
   display: inline-block;
 }
 
+
+
 .services-list div:hover {
   background-color: #42686f;
   transform: translateY(-10px);
 }
 
-/* ---------- Portfolio/My Work SECTION ----------  */
+/* ---------- Portfolio / My Work SECTION ----------  */
 
 #portfolio {
   padding: 50px 0;
@@ -286,6 +310,7 @@ nav ul li a:hover::after {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
+
 }
 
 .work {
