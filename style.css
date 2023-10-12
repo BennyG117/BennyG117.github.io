@@ -564,16 +564,14 @@ nav .fas{
     /* width: 600px; */
     /* height: 100%; */
     height: 90vh;
-
     background-image: linear-gradient(rgba(238, 192, 167, 0.0), rgba(59, 96, 100, 1)), url(images/BG/BGmobile.jpg);
     background-size: 100% 80%, cover;
     /* background-position: top, center; */
     background-position: bottom, center;
     background-repeat: no-repeat, no-repeat;
-
-
   }
-    /* added colors to bars for visability */
+
+    /* sandwich menu icon */
     .fa-bars{
       color: #eec0a7;
       border: 1px solid #42686f;
@@ -586,7 +584,7 @@ nav .fas{
     .header-text{
       /* margin-top: 100%; */
       /* margin-top: 60%; */
-      margin-top: 250px;
+      margin-top: 700px;
       font-size: 20px;
     }
     .header-text h1{
@@ -598,26 +596,29 @@ nav .fas{
       font-size: 35px;
     }
     
+    /* right side menu */
     nav ul{
-      /* background: #dcb29b; */
       background:linear-gradient(rgba(238, 192, 167, 1), rgba(59, 96, 100, 1));
       background-size: 100%, 40%, cover;
+      
       position: fixed;
+
+      
       top: 0;
-      right: -200px;
+      
+      /* right: -200px; */
+      right: -350px;
+
       /* right: 0; */
       /* width: 200px; */
-      width: 400px;
-      
+      width: 350px;
       /* =====adjusting drop menu====== */
       /* height: 100%; */
       height: 90vh;
-
-
+      /* height: 770px; */
       padding-top: 50px;
       z-index: 2;
       transition: right 0.5s;
-
     }
 
     nav ul li{
@@ -651,6 +652,11 @@ nav .fas{
     .about-col-1{
       margin-bottom: 30px;
     }
+
+    .clicking{
+      font-size: 18px;
+    }
+
     /*! WORKING HERE */
     .about-col-2{
       font-size: 14px;
@@ -671,8 +677,11 @@ nav .fas{
     }
 
     .copyright{
+      display: flex;
+      justify-content: start;
+      padding-left: 20px;
       font-size: 14px;
-      width: 600px;
+      width: 100%;
 
 
 
