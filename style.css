@@ -25,12 +25,6 @@ body {
   height: 60vh;
   /* height: 100%; */
 
-  /* background-image: url(images/BG/Sedona.jpg); */
-  /* background-size: cover; */
-  /* background-position: center; */
-
-  /* background-image: linear-gradient(to left, rgba(238, 192, 167, 0.0), rgba(59, 96, 100, 1)), url(images/BG/Sedona.jpg); */
-
   background-image: linear-gradient(to left, rgba(238, 192, 167, .2), rgba(59, 96, 100, 1)), url(images/BG/Sedona.jpg);
   background-size: 100% 100%, cover;
   /* background-size: 20% 100%, cover; */
@@ -41,6 +35,12 @@ body {
 
     /* ====== overflow text attempt */
     overflow:hidden;
+
+    /* ====== overflow text 2nd attempt */
+    /* display: flex;
+    justify-content: space-between;
+    align-items: flex-end; */
+
   
 }
 
@@ -103,9 +103,19 @@ nav ul li a:hover::after {
 /* Header text and page titles */
 .header-text {
   /* margin-top: 20%; */
-  margin-top: 300px;
+  margin-top: 200px;
   font-size: 35px;
 
+  /* ====== overflow text 2nd attempt */
+  text-align: start;
+}
+
+.header-text p{
+  /* ====== overflow text 2nd attempt */
+  /* font-size: 6vw; */
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
 }
 
 /* header text and h1 */
@@ -113,6 +123,10 @@ nav ul li a:hover::after {
   font-size: 60px;
   margin-top: 40px;
   margin-bottom: 40px;
+
+  /* ====== overflow text 2nd attempt */
+  /* font-size: 8vw; */
+
 }
 
 /* with span  */
